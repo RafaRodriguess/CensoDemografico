@@ -16,7 +16,7 @@ public class CensoDemografico {
 		for (i = 0; i <= 999; i++) {
 			System.out.print("Selecione seu gênero:\n0 - Feminino\n1 - Masculino\n2 - Outros\nOpção: ");
 			/*
-			 * enquanto a entrada 'genero' não for verdade, ele ira repetir a pergunta,
+			 * enquanto a entrada 'genero' for verdade, ele ira repetir a pergunta,
 			 * fazendo com que  a resposta, quando errada, não faça parte da contagem do
 			 * for
 			 */
