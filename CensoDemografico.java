@@ -13,19 +13,19 @@ public class CensoDemografico {
 		double altura, alturacontF = 0, idadecontM = 0, idadecontF = 0, idadecontO = 0;
 		double percent = 0;
 
-		for (i = 0; i <= 5; i++) {
-			System.out.print("Selecione seu gênero:\n0 - Feminino\n1 - Masculino\n2 - Outros\nOpção: ");
+		for (i = 0; i <= 999; i++) {
+			System.out.print("Selecione seu gÃªnero:\n0 - Feminino\n1 - Masculino\n2 - Outros\nOpÃ§Ã£o: ");
 			/*
-			 * enquanto a entrada 'genero' não for verdade, ele ira repetir a pergunta,
-			 * fazendo com que  a resposta, quando errada, não faça parte da contagem do
+			 * enquanto a entrada 'genero' nÃ£o for verdade, ele ira repetir a pergunta,
+			 * fazendo com que  a resposta, quando errada, nÃ£o faÃ§a parte da contagem do
 			 * for
 			 */
 			while (true) {
 				genero = sc.nextInt();
 				if (genero < 0 || genero > 2) {
-					System.out.println("Opção inválida");
-					System.out.print("\nSelecione seu gênero:\n0 - Feminino\n1 - Masculino\n2 - Outros\nOpção: ");
-					continue;// se for verdade, o continue jogará para o próximo comando
+					System.out.println("OpÃ§Ã£o invÃ¡lida");
+					System.out.print("\nSelecione seu gÃªnero:\n0 - Feminino\n1 - Masculino\n2 - Outros\nOpÃ§Ã£o: ");
+					continue;// se for verdade, o continue jogarÃ¡ para o prÃ³ximo comando
 				}
 				break;// perguntar de novo
 			} // fim while
@@ -40,7 +40,7 @@ public class CensoDemografico {
 			
 			switch (genero) {
 			case 0:// 0 - feminino
-				idadecontF += idade;// o contador idade vai receber contador idade + idade, pra sempre acrescentar a nova idade depois da repetição
+				idadecontF += idade;// o contador idade vai receber contador idade + idade, pra sempre acrescentar a nova idade depois da repetiÃ§Ã£o
 				alturacontF += altura;// o contador altura vai receber contador altura + altura
 				contF++;// contar numero de mulheres
 				break;
@@ -49,22 +49,22 @@ public class CensoDemografico {
 				contM++;// contas numero homens
 				break;
 			case 2:// 2 - outros
-				idadecontO += idade;// idade das pessoas de gênero 'outros'
+				idadecontO += idade;// idade das pessoas de gÃªnero 'outros'
 				contO++;// contar outros
 				break;
 			default:
-				System.out.println("Opção inválida");
+				System.out.println("OpÃ§Ã£o invÃ¡lida");
 			}// fim switch
 			System.out.println();// quebra linha
 		} // fim for
 		// a)media idade grupo
-		System.out.printf("Media idade do grupo é de %.1f anos\n",(idadecontF + idadecontM + idadecontO) / (contF + contM + contO));
+		System.out.printf("Media idade do grupo Ã© de %.1f anos\n",(idadecontF + idadecontM + idadecontO) / (contF + contM + contO));
 		// b media altura mulheres
 		System.out.printf("Media altura mulheres: %.2f metros\n", (alturacontF / contF));
 		// c)media idade homens
 		System.out.printf("Media idade homens: %.1f anos\n", (idadecontM / contM));
 		// d)quantidade pessoas 'outros'
-		System.out.printf("A quantidade de pessoas do gênero 'outros': %d\n", contO);
+		System.out.printf("A quantidade de pessoas do gÃªnero 'outros': %d\n", contO);
 		// e)percentual de pessoas com idade entre 18 e 35 anos
 		System.out.printf("Percentual de pessoas entre 18 e 35 anos: %.2f", (percent / 1000) * 100);
 		
